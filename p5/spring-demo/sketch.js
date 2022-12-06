@@ -13,6 +13,12 @@ let numParticles = 10;
 let gravity;
 let k = 1.9;
 
+let imgData;
+
+
+function preload() {
+	imaData = loadImage("star.png");
+}
 
 
 function setup() {
@@ -36,6 +42,9 @@ function setup() {
 
 function draw() {
 	background(0);
+
+	image(imgData, 100, 100);
+
 	for (let y = 0; y < rows; y++) {
 		for (let x = 0; x < cols; x++) {
 			let xPos = x * scl;
